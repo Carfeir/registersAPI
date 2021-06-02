@@ -1,0 +1,23 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/registers/edit/{{register.id}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{register.concept}}" class="form-control" name="concept" placeholder="Concept" autofocus>
+                        </div><br>
+                        <div class="form-group">
+                            <input type="number" value="{{register.amount}}" class="form-control" name="amount" placeholder="Amount" autofocus>
+                        </div><br>
+                        <div class="form-group">
+                            <button class="btn btn-success w-100">
+                                Save
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
