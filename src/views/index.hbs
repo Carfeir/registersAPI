@@ -1,7 +1,7 @@
 <div class="container p-4">
     <div class="row">
         <div class="container">
-            <h2>Current balance:</h2>
+            <h2>Current balance:  ${{ balanceResult }}</h2>
             <hr>
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <h4 class="padding-right-4 color-light">Filter by:</h4>
@@ -29,24 +29,26 @@
                     <tbody>
                         {{#each registers}}
                         <tr>
-                            <td>{{concept}}</td>
-                            <td>${{amount}}</td>
-                            <td>{{timeago created_at}}</td>
-                            <td>{{type}}</td>
+                            <td>{{ concept }}</td>
+                            <td>${{ amount }}</td>
+                            <td>{{ timeago created_at }}</td>
+                            <td>{{ type }}</td>
+                            
                             <td>
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="/registers/delete/{{id}}">
+                                    <a href="/registers/delete/{{ id }}">
                                         <button type="button" class="btn btn-danger">
                                             <i class="fas fa-times"></i>
                                         </button>
                                     </a>
-                                    <a href="/registers/edit/{{id}}">
+                                    <a href="/registers/edit/{{ id }}">
                                         <button type="button" class="btn btn-light">
                                             <i class="far fa-edit"></i>
                                         </button>
                                     </a>
                                 </div>
                             </td>
+                            
                         </tr>
                         {{else}}
                         <div class="col-md-4 mx-auto">
